@@ -34,7 +34,7 @@ const TabNavigator = () => {
               <Icon
                 name="users"
                 type="entypo"
-                color={focused ? "##855ee6" : "#e6855e"}
+                color={focused ? "#855ee6" : "#e6855e"}
               />
             );
           } else if (route.name === "Orders") {
@@ -42,7 +42,7 @@ const TabNavigator = () => {
               <Icon
                 name="box"
                 type="entypo"
-                color={focused ? "##855ee6" : "#e6855e"}
+                color={focused ? "#855ee6" : "#e6855e"}
               />
             );
           } else if (route.name === "Login") {
@@ -50,7 +50,7 @@ const TabNavigator = () => {
               <Icon
                 name="mobile"
                 type="entypo"
-                color={focused ? "##855ee6" : "#e6855e"}
+                color={focused ? "#855ee6" : "#e6855e"}
               />
             );
           }
