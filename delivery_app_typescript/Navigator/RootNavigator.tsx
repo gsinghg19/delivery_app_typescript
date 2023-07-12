@@ -1,13 +1,12 @@
-import { View, Text } from "react-native";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabNavigator from "./TabNavigator";
 
-export interface RootStackParamList {
+export type RootStackParamList = {
   Main: undefined;
   MyModal: { userId: string; name: string };
   Order: { order: any }; //change this 'any' type definition before deploying app!!!
-}
+};
 
 const RootStack = createNativeStackNavigator();
 

@@ -39,6 +39,31 @@
 			"display": "none"
 		}
 	},
+	"h-60": {
+		"style": {
+			"height": 240
+		}
+	},
+	"h-full": {
+		"style": {
+			"height": "100%"
+		}
+	},
+	"h-64": {
+		"style": {
+			"height": 256
+		}
+	},
+	"w-40": {
+		"style": {
+			"width": 160
+		}
+	},
+	"w-full": {
+		"style": {
+			"width": "100%"
+		}
+	},
 	"border": {
 		"style": {
 			"borderTopWidth": 1,

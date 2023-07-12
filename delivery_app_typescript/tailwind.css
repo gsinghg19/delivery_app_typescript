@@ -30,6 +30,26 @@
   display: none
 }
 
+.h-60 {
+  height: 15rem
+}
+
+.h-full {
+  height: 100%
+}
+
+.h-64 {
+  height: 16rem
+}
+
+.w-40 {
+  width: 10rem
+}
+
+.w-full {
+  width: 100%
+}
+
 .border {
   border-width: 1px
 }
