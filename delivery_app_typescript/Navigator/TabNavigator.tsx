@@ -45,6 +45,14 @@ const TabNavigator = () => {
                 color={focused ? "##855ee6" : "#e6855e"}
               />
             );
+          } else if (route.name === "Login") {
+            return (
+              <Icon
+                name="mobile"
+                type="entypo"
+                color={focused ? "##855ee6" : "#e6855e"}
+              />
+            );
           }
         },
       })}
