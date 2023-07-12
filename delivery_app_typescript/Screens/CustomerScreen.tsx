@@ -41,6 +41,7 @@ const CustomerScreen = () => {
         placeholder="Search by customer..."
         value={input}
         onChangeText={setInput}
+        containerStyle={tw("bg-white pt-5 pb-0 px-10")}
       />
     </ScrollView>
   );
