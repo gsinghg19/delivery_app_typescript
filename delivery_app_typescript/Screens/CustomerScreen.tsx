@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import {
   useNavigation,
   CompositeNavigationProp,
@@ -8,7 +8,7 @@ import { TabStackParamList } from "../Navigator/TabNavigator";
 import { RootStackParamList } from "../Navigator/RootNavigator";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
-import { Image } from "@rneui/themed";
+import { Image, Input } from "@rneui/themed";
 import { useTailwind } from "tailwind-rn/dist";
 
 // create a composite navigation prop here.
@@ -18,6 +18,8 @@ export type CustomerScrnCompositeNavProp = CompositeNavigationProp<
 >;
 
 const CustomerScreen = () => {
+  const [input, setInput] = useState<string>("");
+
   const navigation = useNavigation<CustomerScrnCompositeNavProp>();
   const tw = useTailwind();
 
@@ -34,6 +36,11 @@ const CustomerScreen = () => {
         source={{ uri: "https://i.imgur.com/uU8GTZM.jpeg" }}
         containerStyle={tw("w-full h-64")}
         PlaceholderContent={<ActivityIndicator />}
+      />
+      <Input
+        placeholder="Search by customer..."
+        value={input}
+        onChangeText={setInput}
       />
     </ScrollView>
   );
