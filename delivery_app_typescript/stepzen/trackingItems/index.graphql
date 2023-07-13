@@ -1,0 +1,18 @@
+type ItemsEntry {
+  item_id: Int
+  name: String
+  price: Float
+  quantity: Int
+}
+
+type TrackingList {
+  customer_id: String
+  items: [ItemsEntry]
+}
+
+type Query {
+  getTrackingItemsById(id: ID!): TrackingList
+    @rest(
+      endpoint: "https://delivery-app-cdf21-default-rtdb.europe-west1.firebasedatabase.app/trackingItems/$id.json"
+    )
+}
