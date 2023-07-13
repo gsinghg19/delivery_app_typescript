@@ -1,18 +1,29 @@
-type ItemsEntry {
+type Items {
   item_id: Int
   name: String
   price: Float
   quantity: Int
 }
 
-type TrackingList {
+type TrackingItemsList {
+  name: ID
+  Value: TrackingItems
+}
+
+type TrackingItems {
   customer_id: String
-  items: [ItemsEntry]
+  items: [Items]
 }
 
 type Query {
-  getTrackingItemsById(id: ID!): TrackingList
+  getTrackingItemById(id: ID!): TrackingItems
     @rest(
       endpoint: "https://delivery-app-cdf21-default-rtdb.europe-west1.firebasedatabase.app/trackingItems/$id.json"
+    )
+
+  getTrackingItems: [TrackingItemsList]
+    @rest(
+      endpoint: "https://delivery-app-cdf21-default-rtdb.europe-west1.firebasedatabase.app/trackingItems.json"
+      transforms: [{ pathpattern: [], editor: "objectToArray" }]
     )
 }
