@@ -22,18 +22,6 @@
   top: 0px
 }
 
-.top-10 {
-  top: 2.5rem
-}
-
-.top-20 {
-  top: 5rem
-}
-
-.ml-20 {
-  margin-left: 5rem
-}
-
 .block {
   display: block
 }
@@ -50,32 +38,16 @@
   display: none
 }
 
-.h-64 {
-  height: 16rem
+.h-10 {
+  height: 2.5rem
 }
 
 .h-16 {
   height: 4rem
 }
 
-.h-6 {
-  height: 1.5rem
-}
-
-.h-32 {
-  height: 8rem
-}
-
-.h-0 {
-  height: 0px
-}
-
-.h-10 {
-  height: 2.5rem
-}
-
-.w-full {
-  width: 100%
+.h-64 {
+  height: 16rem
 }
 
 .w-1\/2 {
@@ -86,12 +58,8 @@
   width: 4rem
 }
 
-.w-32 {
-  width: 8rem
-}
-
-.flex-row {
-  flex-direction: row
+.w-full {
+  width: 100%
 }
 
 .border {
@@ -108,36 +76,12 @@
   padding-right: 2.5rem
 }
 
-.px-40 {
-  padding-left: 10rem;
-  padding-right: 10rem
-}
-
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem
-}
-
 .pb-0 {
   padding-bottom: 0px
 }
 
 .pt-5 {
   padding-top: 1.25rem
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem
 }
 
 .uppercase {
