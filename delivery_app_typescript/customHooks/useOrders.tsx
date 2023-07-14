@@ -8,7 +8,6 @@ const useOrders = () => {
 
   useEffect(() => {
     if (!data) return;
-
     const orders: Order[] = [...data.getOrders];
     setOrders(orders);
   }, [data]);
