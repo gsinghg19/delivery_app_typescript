@@ -25,4 +25,9 @@ type Query {
       endpoint: "https://delivery-app-cdf21-default-rtdb.europe-west1.firebasedatabase.app/orders.json"
       transforms: [{ pathpattern: [], editor: "objectToArray" }]
     )
+
+  getOrdersById(id: ID!): Order
+    @rest(
+      endpoint: "https://delivery-app-cdf21-default-rtdb.europe-west1.firebasedatabase.app/orders/$id.json"
+    )
 }
