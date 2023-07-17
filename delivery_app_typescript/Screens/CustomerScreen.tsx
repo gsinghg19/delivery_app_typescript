@@ -8,7 +8,7 @@ import { TabStackParamList } from "../Navigator/TabNavigator";
 import { RootStackParamList } from "../Navigator/RootNavigator";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
-import { Button, Image, Input } from "@rneui/themed";
+import { Button, Card, Image, Input } from "@rneui/themed";
 import { useTailwind } from "tailwind-rn/dist";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -36,7 +36,7 @@ const CustomerScreen = () => {
       <Image
         source={{ uri: "https://i.imgur.com/uU8GTZM.jpeg" }}
         containerStyle={tw("w-full h-64")}
-        PlaceholderContent={<ActivityIndicator />}
+        PlaceholderContent={<ActivityIndicator size="large" color="#0000ff" />}
       />
       <Input
         placeholder="Search by customer..."
@@ -52,6 +52,12 @@ const CustomerScreen = () => {
         >
           <Icon name="close" size={20} />
         </Button>
+      </View>
+      <View>
+        {/* <Card containerStyle={{ backgroundColor: "#00cfff"}}> */}
+        <Card containerStyle={tw("bg-purple-500")}>
+          <ActivityIndicator size="large" color="#0000ff" />
+        </Card>
       </View>
     </ScrollView>
   );
