@@ -54,6 +54,7 @@ const CustomerScreen = () => {
         </Button>
       </View>
       <View>
+        {/* conditional rendering logic will go below. if card data is present, show card data. If it's not present then show the spinner.  */}
         {/* <Card containerStyle={{ backgroundColor: "#00cfff"}}> */}
         <Card containerStyle={tw("bg-purple-500")}>
           <ActivityIndicator size="large" color="#0000ff" />
