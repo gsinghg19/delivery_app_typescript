@@ -1,4 +1,3 @@
-import { View, Text } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ORDERS } from "../graphql/queries";
@@ -12,7 +11,7 @@ function useCustomerOrders(userId: any) {
 
     const orders: Order[] = data.getOrders.map(({ value }: OrderResponse) => ({
       carrier: value.carrier,
-      createdAt: value.createdAt,
+      createAt: value.createAt,
       shippingCost: value.shippingCost,
       trackingId: value.trackingId,
       trackingitems: value.trackingItems,

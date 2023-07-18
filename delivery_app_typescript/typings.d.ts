@@ -15,7 +15,7 @@ type CustomerResponse = {
 
 type Order = {
   carrier: String;
-  createdAt: Date;
+  createAt: Date;
   shippingCost: Int;
   trackingId: String;
   Address: String;
