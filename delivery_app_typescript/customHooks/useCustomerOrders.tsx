@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_ORDERS } from "../graphQL/Queries";
 
-function useCustomerOrders(userId: any) {
+function useCustomerOrders(userId: string) {
   const { loading, error, data } = useQuery(GET_ORDERS);
   const [orders, setOrders] = useState<Order[]>([]);
 
@@ -21,8 +21,16 @@ function useCustomerOrders(userId: any) {
       Lng: value.Lng,
     }));
 
+    //This code shows the error; 'TypeError: Cannot read property 'customer_id' of undefined
+
+    // This error is located at:
+    // in CardContainer (created by CustomerScreen)'
+    // const customerOrders = orders.filter(
+    //   (order) => order.trackingItems.customer_id === userId
+    // );
+
     const customerOrders = orders.filter(
-      (order) => order.trackingItems.customer_id === userId
+      (order) => order.trackingItems === userId
     );
 
     setOrders(customerOrders);

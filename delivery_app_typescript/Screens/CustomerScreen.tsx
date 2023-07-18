@@ -11,6 +11,9 @@ import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import { Button, Card, Image, Input } from "@rneui/themed";
 import { useTailwind } from "tailwind-rn/dist";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { useQuery } from "@apollo/client";
+import { GET_CUSTOMERS } from "../graphQL/Queries";
+import CardContainer from "../components/CardContainer";
 
 // create a composite navigation prop here.
 export type CustomerScrnCompositeNavProp = CompositeNavigationProp<
@@ -19,6 +22,7 @@ export type CustomerScrnCompositeNavProp = CompositeNavigationProp<
 >;
 
 const CustomerScreen = () => {
+  const { loading, error, data } = useQuery(GET_CUSTOMERS);
   const [input, setInput] = useState<string>("");
 
   const navigation = useNavigation<CustomerScrnCompositeNavProp>();
@@ -45,6 +49,11 @@ const CustomerScreen = () => {
         containerStyle={tw("bg-white pt-5 pb-0 px-10")}
         leftIcon={<Icon name="account-outline" size={20} />}
       />
+      {data?.getCustomers.map(
+        ({ name: ID, value: { name, email } }: CustomerResponse) => (
+          <CardContainer key={ID} email={email} name={name} userId={ID} />
+        )
+      )}
       <View style={tw("relative h-10")}>
         <Button
           onPress={() => setInput("")}
@@ -52,13 +61,6 @@ const CustomerScreen = () => {
         >
           <Icon name="close" size={20} />
         </Button>
-      </View>
-      <View>
-        {/* conditional rendering logic will go below. if card data is present, show card data. If it's not present then show the spinner.  */}
-        {/* <Card containerStyle={{ backgroundColor: "#00cfff"}}> */}
-        <Card containerStyle={tw("bg-purple-500")}>
-          <ActivityIndicator size="large" color="#0000ff" />
-        </Card>
       </View>
     </ScrollView>
   );

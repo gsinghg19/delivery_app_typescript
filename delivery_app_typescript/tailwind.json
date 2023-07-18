@@ -87,12 +87,6 @@
 			"borderLeftWidth": 1
 		}
 	},
-	"bg-purple-500": {
-		"style": {
-			"--tw-bg-opacity": 1,
-			"backgroundColor": "rgb(168 85 247 / var(--tw-bg-opacity))"
-		}
-	},
 	"bg-white": {
 		"style": {
 			"--tw-bg-opacity": 1,

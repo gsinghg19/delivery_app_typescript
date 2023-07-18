@@ -14,7 +14,8 @@ import { useEffect, useState } from "react";
 import { Toast } from "react-native-toast-message/lib/src/Toast";
 
 const client = new ApolloClient({
-  uri: "https://dashboard.stepzen.com/explorer?endpoint=api%2Fhopping-dragonfly",
+  // uri: "https://dashboard.stepzen.com/explorer?endpoint=api%2Fhopping-dragonfly",
+  uri: "http://localhost:5001/api/hopping-dragonfly",
   cache: new InMemoryCache(),
 });
 
