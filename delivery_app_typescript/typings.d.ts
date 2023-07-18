@@ -15,7 +15,7 @@ type CustomerResponse = {
 
 type Order = {
   carrier: String;
-  createAt: Date;
+  createdAt: Date;
   shippingCost: Int;
   trackingId: String;
   Address: String;
@@ -23,6 +23,10 @@ type Order = {
   Lat: Float;
   Lng: Float;
   trackingItems: TrackingItems;
+};
+
+type OrderResponse = {
+  value: Order;
 };
 
 type OrderList = {
@@ -38,7 +42,7 @@ type Items = {
 };
 
 type TrackingItems = {
-  customer_id: String;
+  customer_id: ID;
   items: [Items];
   customer: Customer;
 };
