@@ -19,17 +19,17 @@ const client = new ApolloClient({
 });
 
 export default function App() {
-  const [isConnected, setIsConnected] = useState<boolean | null>(null);
+  const [isItConnected, setIsItConnected] = useState<boolean | null>(null);
 
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener((state) => {
-      setIsConnected(state.isConnected);
+      setIsItConnected(state.isConnected);
       if (!state.isConnected) {
         Toast.show({
           type: "error",
           text1: "No Internet Connection",
           visibilityTime: 3000,
-          autoHide: false,
+          autoHide: true,
         });
       } else if (state.isConnected) {
         Toast.show({
