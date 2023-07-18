@@ -8,6 +8,11 @@ type CustomerList = {
   value: Customer;
 };
 
+type CustomerResponse = {
+  name: ID;
+  value: Customer;
+};
+
 type Order = {
   carrier: String;
   createAt: Date;
