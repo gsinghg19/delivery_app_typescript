@@ -58,11 +58,13 @@ const CustomerScreen = () => {
           <Icon name="close" size={20} />
         </Button>
       </View>
-      {data?.getCustomers.map(
-        ({ name: ID, value: { name, email } }: CustomerResponse) => (
-          <CardContainer key={ID} email={email} name={name} userId={ID} />
+      {data?.getCustomers
+        ?.filter((customer: CustomerList) =>
+          customer.value.name.includes(input)
         )
-      )}
+        .map(({ name: ID, value: { name, email } }: CustomerResponse) => (
+          <CardContainer key={ID} email={email} name={name} userId={ID} />
+        ))}
     </ScrollView>
   );
 };
