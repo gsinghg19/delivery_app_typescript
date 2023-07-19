@@ -21,13 +21,15 @@ function useCustomerOrders(userId: string) {
       Lng: value.Lng,
     }));
 
-    //This code shows the error; 'TypeError: Cannot read property 'customer_id' of undefined
-
+    //This code shows the error;
+    //'TypeError: Cannot read property 'customer_id' of undefined
     // This error is located at:
     // in CardContainer (created by CustomerScreen)'
+    // ```
     // const customerOrders = orders.filter(
     //   (order) => order.trackingItems.customer_id === userId
     // );
+    //```
 
     const customerOrders = orders.filter(
       (order) => order.trackingItems === userId

@@ -49,11 +49,7 @@ const CustomerScreen = () => {
         containerStyle={tw("bg-white pt-5 pb-0 px-10")}
         leftIcon={<Icon name="account-outline" size={20} />}
       />
-      {data?.getCustomers.map(
-        ({ name: ID, value: { name, email } }: CustomerResponse) => (
-          <CardContainer key={ID} email={email} name={name} userId={ID} />
-        )
-      )}
+
       <View style={tw("relative h-10")}>
         <Button
           onPress={() => setInput("")}
@@ -62,6 +58,11 @@ const CustomerScreen = () => {
           <Icon name="close" size={20} />
         </Button>
       </View>
+      {data?.getCustomers.map(
+        ({ name: ID, value: { name, email } }: CustomerResponse) => (
+          <CardContainer key={ID} email={email} name={name} userId={ID} />
+        )
+      )}
     </ScrollView>
   );
 };
