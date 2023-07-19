@@ -5,7 +5,6 @@ import { useTailwind } from "tailwind-rn/dist";
 import { useNavigation } from "@react-navigation/native";
 import { CustomerScrnCompositeNavProp } from "../Screens/CustomerScreen";
 import { Card, Icon } from "@rneui/themed";
-import ModalContainer from "./ModalContainer";
 import { CardDivider } from "@rneui/base/dist/Card/Card.Divider";
 
 type Props = {
