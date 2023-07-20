@@ -39,9 +39,9 @@
 			"marginLeft": "auto"
 		}
 	},
-	"ml-5": {
+	"ml-40": {
 		"style": {
-			"marginLeft": 20
+			"marginLeft": 160
 		}
 	},
 	"block": {
@@ -136,12 +136,6 @@
 			"backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
 		}
 	},
-	"bg-blue-300": {
-		"style": {
-			"--tw-bg-opacity": 1,
-			"backgroundColor": "rgb(147 197 253 / var(--tw-bg-opacity))"
-		}
-	},
 	"p-5": {
 		"style": {
 			"paddingTop": 20,
@@ -164,6 +158,51 @@
 	"pt-5": {
 		"style": {
 			"paddingTop": 20
+		}
+	},
+	"pl-5": {
+		"style": {
+			"paddingLeft": 20
+		}
+	},
+	"pt-10": {
+		"style": {
+			"paddingTop": 40
+		}
+	},
+	"pl-20": {
+		"style": {
+			"paddingLeft": 80
+		}
+	},
+	"pl-40": {
+		"style": {
+			"paddingLeft": 160
+		}
+	},
+	"pt-20": {
+		"style": {
+			"paddingTop": 80
+		}
+	},
+	"pl-10": {
+		"style": {
+			"paddingLeft": 40
+		}
+	},
+	"pt-4": {
+		"style": {
+			"paddingTop": 16
+		}
+	},
+	"pr-5": {
+		"style": {
+			"paddingRight": 20
+		}
+	},
+	"pr-4": {
+		"style": {
+			"paddingRight": 16
 		}
 	},
 	"text-2xl": {

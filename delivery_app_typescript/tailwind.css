@@ -30,8 +30,8 @@
   margin-left: auto
 }
 
-.ml-5 {
-  margin-left: 1.25rem
+.ml-40 {
+  margin-left: 10rem
 }
 
 .block {
@@ -103,11 +103,6 @@
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
-.bg-blue-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 197 253 / var(--tw-bg-opacity))
-}
-
 .p-5 {
   padding: 1.25rem
 }
@@ -123,6 +118,42 @@
 
 .pt-5 {
   padding-top: 1.25rem
+}
+
+.pl-5 {
+  padding-left: 1.25rem
+}
+
+.pt-10 {
+  padding-top: 2.5rem
+}
+
+.pl-20 {
+  padding-left: 5rem
+}
+
+.pl-40 {
+  padding-left: 10rem
+}
+
+.pt-20 {
+  padding-top: 5rem
+}
+
+.pl-10 {
+  padding-left: 2.5rem
+}
+
+.pt-4 {
+  padding-top: 1rem
+}
+
+.pr-5 {
+  padding-right: 1.25rem
+}
+
+.pr-4 {
+  padding-right: 1rem
 }
 
 .text-2xl {
