@@ -11,7 +11,7 @@ import {
   CompositeNavigationProp,
 } from "@react-navigation/native";
 
-type CustomerScrnCompositeNavProp = CompositeNavigationProp<
+type ModalScreenNavigationProp = CompositeNavigationProp<
   BottomTabNavigationProp<TabStackParamList>,
   NativeStackNavigationProp<RootStackParamList, "MyModal">
 >;
